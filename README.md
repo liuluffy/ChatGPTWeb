@@ -1,8 +1,3 @@
-## 注意事项
-- 访问地址为http://ip:port/chat
-- 修改`chat.html`文件后，需要docker restart webchat才能生效
-- http://127.0.0.1:8888/chat
-
 ## 前言
 
 本项目是基于 https://github.com/slippersheepig/chatgpt-web/ 的源码基础上进行的修改，主要修改了该项目的 HTML 布局和触发方式。修改内容包括：
