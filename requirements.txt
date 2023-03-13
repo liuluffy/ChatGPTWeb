@@ -1,0 +1,5 @@
+revchatgpt
+python-dotenv
+flask
+gunicorn
+gevent

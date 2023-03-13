@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--自适应屏幕大小-->
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="使用官方ChatGPT API实现简单HTML网页版在线聊天（支持markdown语法及查看对话记录）"/>
+<head>
+    <link rel="icon" href="https://img.sheepig.top/images/2023/01/26/oa.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://img.sheepig.top/images/2023/01/26/oa.png" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <title>Luffy 的私人助手</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="container">
+    <div class="left chat_window">
+        <div class="top_menu">
+            <div class="buttons">
+                <div class="button close"></div>
+                <div class="button minimize"></div>
+                <div class="button maximize"></div>
+            </div>
+            <div class="title">Luffy 的私人助手</div>
+        </div>
+        <div id="loading" style="display:none; color:red"><b>&nbsp;🤖 思考中，不要继续输入问题</b></div>
+        <ul id="myDiv" class="messages">
+            <div style="text-align: left; color: green">
+                <pre style="white-space: pre-wrap; word-wrap:break-word" id="chatlog"></pre>
+            </div>
+        </ul>
+    </div>
+    <div class="right bottom_wrapper clearfix">
+        <textarea class="message_input_wrapper" placeholder="点击这里输入问题,回车键即为提交" id="chatinput"></textarea> 
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

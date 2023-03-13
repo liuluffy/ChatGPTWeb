@@ -1,0 +1,10 @@
+services:
+  chatgpt:
+    image: sheepgreen/chatgpt-web:arm #如果不是arm架构，需要改成chatgpt-web
+    container_name: webchat
+    volumes:
+      - ./.env:/chatgpt-web/.env
+#      - ./chat.html:/chatgpt-web/templates/chat.html #默认内置我的UI，如需替换自用网页请取消注释，需与docker-compose.yml文件在同一目录
+    ports:
+      - "8888:8088" #8088为容器内部端口，不可更改；8888为外部映射端口，可自行更改
+    restart: always
